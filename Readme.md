@@ -2,7 +2,7 @@
 
 - Студент: [Дмитрий Черкашин](https://up.htmlacademy.ru/htmlcss/40/user/2453853).
 - Наставник: [Олег Зайцев](https://htmlacademy.ru/profile/ozi).
-- Сайт: [Мой проект "Седона"] (https://dach1980.github.io/Cherkashin-Sedona-1/)
+- Сайт: [Мой проект "Седона"](https://dach1980.github.io/Cherkashin-Sedona-1/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
