@@ -107,10 +107,45 @@ body {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.navigation-link:focus {
+  box-shadow: inset 0 0 0 6px #82B3D3;
+  outline: none;
+}
+
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 2px;
+  background-color: #756257;
+}
+
 .navigation-user-link {
   position: relative;
   display: block;
   padding: 20px 13px;
+}
+
+.navigation-icon {
+  fill: #000000;
+}
+
+.navigation-icon:hover {
+  fill: #82B3D3;
+}
+
+.navigation-icon:focus {
+  fill: #82B3D3;
 }
 
 .hearts-counter {
@@ -142,6 +177,15 @@ body {
   text-align: center;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.signin:hover {
+  background-color: rgba(117, 97, 87, 0.7);
+}
+
+.signin:focus {
+  outline: 2px solid #dbb590;
+  background-color: #4e2e0e;
 }
 
 /* блок hero*/
@@ -623,19 +667,55 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumbs-item {
-  list-style: none;
+  position: relative;
 }
 
 .breadcrumbs-link {
+  display: block;
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
+  margin-right: 41px;
+}
+
+.breadcrumbs-link-home {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  color: #FFFFFF;
+  top: 4px;
   cursor: pointer;
-  padding: 3px;
-  padding-right: 10px;
+}
+
+.breadcrumbs-link-home:hover {
+  color: #dbb590;
+}
+
+.breadcrumbs-link-home:focus {
+  color: #E6E6E6;
+}
+
+
+
+.breadcrumbs-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  width: 8px;
+  height: 20px;
+  background-image: url("../images/catalog/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 8px 20px;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link::after {
+  content: none;
 }
 
 .catalog-filter {
@@ -654,6 +734,7 @@ body {
 .catalog-filter-list {
   margin: 0;
   padding: 0;
+  padding-right: 70px;
 }
 
 .infrastructure {
@@ -690,26 +771,49 @@ body {
 .cost-choice {
   display: grid;
   grid-template-columns: 143px 143px;
-  padding-right: 70px;
+}
+
+.catalog-filter-field {
+  display: flex;
+  position: relative;
+  column-gap: 2px;
 }
 
 .cost-choice-field {
-  width: 118px;
-  height: 48px;
+  width: 141px;
+  padding: 12px 20px;
+  font-family: inferit;
+  font-size: 18px;
+  color: #000000;
+  background-color: #F2F2F2;
+  border: 0;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .cost-choice-text {
+  /* display: block; */
   margin: 0;
   padding: 0;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
-  background-color: #F2F2F2;
+  right: 20px;
+  top: 11px;
+  position: absolute;
 }
+
+.cost-choice-from {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 
 .cost-choice-range {
   padding-top: 36px;
+  grid-column: 1 / -1;
+  align-self: center;
 }
 
 .cost-choice-range-item {
@@ -718,6 +822,47 @@ body {
 
 .control {
   cursor: pointer;
+  position: relative;
+}
+
+.catalog-checkbox {
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 2px;
+  left: -35px;
+  width: 20px;
+  height: 20px;
+}
+
+.control-input[type="checkbox"] + .catalog-checkbox {
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .catalog-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  background-image: url("../images/catalog/checkbox-checked-mark.svg");
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 10px;
+}
+
+.control-input[type="radio"] + .catalog-checkbox {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .catalog-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-image: url("../images/catalog/radio-checked-mark.svg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 .catalog-filter-button-block {
@@ -787,7 +932,16 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   padding: 14px 0 14px 20px;
+  background-image: url("../images/catalog/arrow-down.svg");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center right 20px;
 }
+
+.select-control:hover {
+  border: 2px solid #82B3D3;
+}
+
 
 .find-hotels-buttons-block {
   display: flex;
@@ -837,6 +991,11 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.active-view-button {
+  border: 2px solid #000000;
+}
+
 
 /* Стилизация карточек */
 .product-list {
