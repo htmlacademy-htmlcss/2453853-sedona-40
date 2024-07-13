@@ -589,6 +589,9 @@ body {
 }
 
 .subscribe-button {
+  display: inline-block;
+  width: 232px;
+  max-width: 300px;
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
@@ -599,7 +602,7 @@ body {
   background-color: #82B3D3;
   cursor: pointer;
   border: none;
-  padding: 8px 50px;
+  padding: 8px 20px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -628,7 +631,6 @@ body {
   font-size: 18px;
   line-height: 24px;
   width: 452px;
-  height: 52px;
   border: #FFFFFF;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -904,7 +906,7 @@ body {
 
 .range-wrapper-inputs {
   display: grid;
-  grid-template-columns: 145px 145px;
+  grid-template-columns: 144px 144px;
   row-gap: 44px;
 }
 
@@ -917,6 +919,7 @@ body {
 .cost-choice-field {
   max-width: 141px;
   padding: 12px 20px;
+  padding-right: 37px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -1163,8 +1166,6 @@ body {
   color: rgba(0, 0, 0, 0.3);
   outline: 2px solid rgba(0, 0, 0, 0.3);
 }
-
-
 
 .find-hotels-buttons-block {
   display: flex;
@@ -1687,6 +1688,7 @@ body {
 }
 
 .calendar-link {
+  border: none;
   position: absolute;
   top: 17px;
   right: 22px;
@@ -1751,7 +1753,12 @@ body {
 
 .adults-amount,
 .childs-amount {
-  position: relative;
+  display: grid;
+  grid-template-columns: 40px 31px 40px;
+  align-items: center;
+  width: 111px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
 }
 
 .adults-childs-container {
@@ -1766,22 +1773,16 @@ body {
 }
 
 .amount-button {
-  position: absolute;
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
   height: 20px;
   width: 20px;
   border: none;
   color: rgba(117, 97, 87, 0.3);
   cursor: pointer;
-}
-
-.button-minus {
-  top: 13px;
-  left: 10px;
-}
-
-.button-plus {
-  top: 13px;
-  right: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .amount-button:hover {
@@ -1800,16 +1801,6 @@ body {
   outline: none;
 }
 
-.minus-svg,
-.plus-svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
-
 .amount-field {
   color: #000000;
   font-size: 18px;
@@ -1817,10 +1808,8 @@ body {
   line-height: 20px;
   text-align: center;
   font-family: inherit;
-  max-width: 110px;
-  border-radius: 4px;
   background: #F2F2F2;
-  padding: 14px 10px;
+  padding: 14px 5px;
   border: none;
 }
 
@@ -1829,18 +1818,6 @@ body {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
-}
-
-
-.button-plus {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  border: none;
-  top: 13px;
-  right: 10px;
-  color: rgba(117, 97, 87, 0.3);
-  cursor: pointer;
 }
 
 .childs-container {
@@ -1878,12 +1855,12 @@ body {
 }
 
 /* Стилизация поповера */
-.popover-comment {
+.tooltip-comment {
   display: flex;
   margin-right: 48px;
 }
 
-.popover-info {
+.tooltip-info {
   position: relative;
   width: 26px;
   height: 26px;
@@ -1895,11 +1872,15 @@ body {
   background-color: #83B3D3;
 }
 
-.popover-info:hover .popover-comment-text {
+.tooltip-info:hover .tooltip-comment-text {
   display: block;
 }
 
-.popover-comment-text {
+.tooltip-info:focus-within .tooltip-comment-text {
+  display: block;
+}
+
+.tooltip-comment-text {
   display: none;
   position: absolute;
   top: 42px;
@@ -1914,12 +1895,12 @@ body {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
-.popover-comment-text::before {
+.tooltip-comment-text::before {
   position: absolute;
   content: "";
   top: -9px;
   right: 119px;
   width: 19px;
   height: 9px;
-  background-image: url("../images/modal/popover-arrow.svg");
+  background-image: url("../images/modal/tooltip-arrow.svg");
 }

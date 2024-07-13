@@ -224,7 +224,7 @@
 
       <div class="modal-container modal-container-close">
         <div class="modal">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <section class="modal-content">
@@ -235,18 +235,18 @@
               <label class="arrival-date" for="arrival-field">Дата заезда:</label>
               <input class="date-field arrival-date-field" type="text" id="arrival-field" name="dateArrival"
                 placeholder="Выберите дату" value="27 апреля 2020">
-              <a class="calendar-link" href="">
+              <button class="calendar-link" type="button">
                 <img class="calendar-link-img" src="/images/modal/calendar.svg" alt="Выбор даты">
-              </a>
+              </button>
               <span class="date-comment date-comment-incorrect">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="date-container departure-date-container">
               <label class="departure-date" for="departure-field">Дата выезда:</label>
               <input class="date-field departure-date-field" type="text" id="departure-field" name="auth-password"
                 placeholder="Выберите дату" value="1 сентября 2023">
-              <a class="calendar-link" href="">
+              <button class="calendar-link" type="button">
                 <img class="calendar-link-img" src="/images/modal/calendar.svg" alt="Выбор даты">
-              </a>
+              </button>
               <span class="date-comment">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
@@ -274,10 +274,10 @@
               </div>
 
               <div class="childs-container">
-                <div class="popover-comment">
+                <div class="tooltip-comment">
                   <label class="childs-title" for="childs-field">Дети:</label>
-                  <a class="popover-info" href="#">
-                    <span class="popover-comment-text">
+                  <a class="tooltip-info" href="#">
+                    <span class="tooltip-comment-text">
                       Укажите количество детей, которые будут с вами, возраст
                       которых от 6 до 18 лет. Дети до 6 лет размещаются
                       бесплатно.
