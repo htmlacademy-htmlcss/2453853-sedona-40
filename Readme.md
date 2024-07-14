@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Дмитрий Черкашин](https://up.htmlacademy.ru/htmlcss/40/user/2453853).
-* Наставник: `Неизвестно`.
+- Студент: [Дмитрий Черкашин](https://up.htmlacademy.ru/htmlcss/40/user/2453853).
+- Наставник: [Олег Зайцев](https://htmlacademy.ru/profile/ozi).
 
 ---
 
