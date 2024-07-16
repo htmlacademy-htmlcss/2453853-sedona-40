@@ -23,7 +23,7 @@
               <a class="navigation-link" href="about.html">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-user">
@@ -167,17 +167,19 @@
               <option value="popular">Сначала популярные</option>
             </select>
             <div class="find-hotels-buttons-block">
-              <a class="find-hotels-buttons button-cards active-view-button" href="#">Показать карточки</a>
+              <a class="find-hotels-buttons button-cards active-view-button" href="catalog.html?view=tile">Показать
+                карточки</a>
 
-              <a class="find-hotels-buttons button-img" href="#">Показать картинки</a>
+              <a class="find-hotels-buttons button-img" href="catalog.html?view=card">Показать картинки</a>
 
-              <a class="find-hotels-buttons button-list" href="#">Показать список</a>
+              <a class="find-hotels-buttons button-list" href="catalog.html?view=list">Показать список</a>
             </div>
           </div>
           <ul class="product-list" data-test="catalog">
             <li class="product-card">
               <a class="product-card-link" href="product.html">
-                <img class="product-card-image" src="images/catalog/hotel-1.jpg" alt="hotel Amara Resort & Spa">
+                <img class="product-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212"
+                  alt="hotel Amara Resort & Spa">
                 <h3 class="product-card-title">
                   <span>Amara Resort & Spa</span>
                 </h3>
@@ -206,7 +208,8 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="product.html">
-                <img class="product-card-image" src="images/catalog/hotel-2.jpg" alt="hotel Villas at Poco Diablo">
+                <img class="product-card-image" src="images/catalog/hotel-2.jpg" width="300" height="212"
+                  alt="hotel Villas at Poco Diablo">
                 <h3 class="product-card-title">
                   <span>Villas at Poco Diablo</span>
                 </h3>
@@ -235,7 +238,8 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="product.html">
-                <img class="product-card-image" src="images/catalog/hotel-3.jpg" alt="hotel Desert Quail Inn">
+                <img class="product-card-image" src="images/catalog/hotel-3.jpg" width="300" height="212"
+                  alt="hotel Desert Quail Inn">
                 <h3 class="product-card-title">
                   <span>Desert Quail Inn</span>
                 </h3>
@@ -263,7 +267,8 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="product.html">
-                <img class="product-card-image" src="images/catalog/hotel-4.jpg" alt="hotel GreenTree Inn">
+                <img class="product-card-image" src="images/catalog/hotel-4.jpg" width="300" height="212"
+                  alt="hotel GreenTree Inn">
                 <h3 class="product-card-title">
                   <span>GreenTree Inn</span>
                 </h3>
@@ -322,7 +327,7 @@
             </div>
             <div class="catalog-subscribe-block">
               <input class="catalog-subscribe-field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
-                id="email">
+                id="email" required>
               <label for="email"></label>
               <button class="catalog-subscribe-button newsletter-button" type="submit">
                 <span>ПОДПИСАТЬСЯ</span>
@@ -370,7 +375,8 @@
         <address class="footer-contacts">
           <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+          rel="noreferrer noopener">
           <span class="visually-hidden">.html academy</span>
           <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" width="115" height="34" viewBox="0 0 115 34"
             aria-hidden="true" focusable="false" fill="currentColor">
