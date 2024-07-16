@@ -234,13 +234,13 @@
             <div class="date-container arrival-date-container">
               <label class="arrival-date" for="arrival-field">Дата заезда:</label>
               <input class="date-field date-field-img" type="text" id="arrival-field" name="dateArrival"
-                placeholder="Выберите дату" value="27 апреля 2020">
+                placeholder="Выберите дату" value="27 апреля 2020" required>
               <span class="date-comment date-comment-incorrect">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="date-container departure-date-container">
               <label class="departure-date" for="departure-field">Дата выезда:</label>
               <input class="date-field date-field-img" type="text" id="departure-field" name="auth-password"
-                placeholder="Выберите дату" value="1 сентября 2023">
+                placeholder="Выберите дату" value="1 сентября 2023" required>
               <span class="date-comment">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
@@ -256,7 +256,7 @@
                     </svg>
                   </button>
                   <input class="amount-field" type="number" id="adults-field" name="adults-field" value="2"
-                    placeholder="0" min="1" step="1">
+                    placeholder="0" min="1" step="1" required>
                   <button class="button-plus amount-button" type="button">
                     <span class="visually-hidden">Кнопка увеличить</span>
                     <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
@@ -270,13 +270,13 @@
               <div class="childs-container">
                 <div class="tooltip-comment">
                   <label class="childs-title" for="childs-field">Дети:</label>
-                  <a class="tooltip-info" href="#">
+                  <button class="tooltip-info" type="button">
                     <span class="tooltip-comment-text">
                       Укажите количество детей, которые будут с вами, возраст
                       которых от 6 до 18 лет. Дети до 6 лет размещаются
                       бесплатно.
                     </span>
-                  </a>
+                  </button>
                 </div>
 
                 <div class="childs-amount">
@@ -288,7 +288,7 @@
                     </svg>
                   </button>
                   <input class="amount-field" type="number" id="childs-field" name="childs-field" value="2"
-                    placeholder="0" min="1" step="1">
+                    placeholder="0" min="1" step="1" required>
                   <button class="button-plus amount-button" type="button">
                     <span class="visually-hidden">Кнопка увеличить</span>
                     <svg class="plus-svg" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
