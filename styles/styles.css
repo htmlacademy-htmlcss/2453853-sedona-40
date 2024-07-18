@@ -234,7 +234,7 @@ body {
   width: 100%;
   height: 57px;
   bottom: 0;
-  background-image: url(../images/hero-background-bottom.svg);
+  background-image: url("../images/hero-background-bottom.svg");
 }
 
 .hero-img {
@@ -1498,7 +1498,6 @@ body {
 }
 
 .pagination-link:focus {
-  /* border: 1px solid rgb(130, 179, 211); */
   background-color: #68a2ca;
 }
 
@@ -1800,6 +1799,7 @@ body {
   width: 100%;
   border: none;
   color: rgba(117, 97, 87, 0.3);
+  background: #f2f2f2;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -1887,7 +1887,7 @@ body {
   width: 26px;
   height: 26px;
   padding: 6px;
-  background-image: url(../images/modal/info.svg);
+  background-image: url("../images/modal/info.svg");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
